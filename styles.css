@@ -1,0 +1,311 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    margin: 2;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+    line-height: 1.6;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Full-Page Sections */
+.full-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px; /* Reduced padding */
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px; /* Reduced padding */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(219, 58, 112, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1500;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px; /* Reduced margin */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600; /* Semi-bold */
+    font-size: 1rem; /* Reduced font size */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Home Section */
+#home h1 {
+    font-size: 3rem; /* Larger for impact */
+    font-weight: 900; /* Bold */
+    color: #125bad;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: float 3s ease-in-out infinite, colorChange 5s infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #0532c7;
+    }
+    50% {
+        color: #fc8907;
+    }
+    100% {
+        color: #e70939;
+    }
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 350px; /* Reduced size */
+    height: 400px; /* Reduced size */
+    margin: 80px 0; /* Reduced margin */
+    box-shadow: 0 15px 25px rgba(9, 205, 240, 0.979);
+    animation: spin 0s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.encouragement {
+    font-size: 1.2rem; /* Slightly larger */
+    font-weight: 500; /* Medium */
+    color: #555;
+    animation: fadeIn 2s ease-in-out, colorChange 5s infinite;
+}
+
+@keyframes fadeIn {
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* About Me Section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px; /* Reduced margin */
+}
+
+.gallery img {
+    border-radius: 50px;
+    width: 400px; /* Reduced size */
+    height: 400px; /* Reduced size */
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(14, 148, 236, 0.801);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* My Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted grid */
+    gap: 100px; /* Reduced gap */
+    margin-top: 30px; /* Reduced margin */
+}
+
+.skill {
+    background: rgba(3, 238, 247, 0.911);
+    padding: 15px; /* Reduced padding */
+    border-radius: 35px;
+    box-shadow: 0 5px 15px rgba(39, 4, 236, 0.966);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+}
+
+.skill i {
+    font-size: 3rem; /* Larger icons */
+    color: #007BFF;
+    margin-bottom: 50px; /* Reduced margin */
+    animation: colorChange 5s infinite;
+}
+
+.skill h3 {
+    font-size: 1.5rem; /* Larger font */
+    font-weight: 700; /* Semi-bold */
+    color: #333;
+    animation: colorChange 5s infinite;
+}
+
+.skill p {
+    font-size: 2rem; /* Reduced font size */
+    font-weight: 500; /* Regular */
+    color: #080707;
+}
+
+/* Donation Section */
+#donate .donation-details {
+    background: rgba(118, 235, 103, 0.938);
+    padding: 20px; /* Reduced padding */
+    border-radius: 60px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 70px; /* Reduced margin */
+}
+
+#donate p {
+    font-size: 1rem; /* Reduced font size */
+    font-weight: 500; /* Medium */
+    color: #555;
+    animation: colorChange 5s infinite;
+}
+
+/* Thank You Section */
+#thankyou p {
+    font-size: 2.1rem; /* Slightly larger */
+    font-weight: 500; /* Regular */
+    line-height: 1.6; /* Adjusted line height */
+    max-width: 900px;
+    margin: 2 auto;
+    animation: colorChange 5s infinite;
+}
+
+/* Footer */
+footer {
+    background: rgba(41, 201, 241, 0.932);
+    padding: 15px; /* Reduced padding */
+    text-align: center;
+}
+
+.social-media a {
+    margin: 0 15px;
+    font-size: 1.5rem; /* Larger icons */
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: colorChange 5s infinite;
+}
+
+.social-media a:hover {
+    color: #007BFF;
+    transform: translateY(-2px);
+}
+
+/* Balloon Decorations */
+.balloon {
+    position: absolute;
+    width: 80px; /* Reduced size */
+    height: 120px; /* Reduced size */
+    background: #ff6f61;
+    border-radius: 50%;
+    animation: floatBalloon 6s infinite ease-in-out;
+    z-index: -1;
+}
+
+.balloon:nth-child(1) {
+    left: 10%;
+    top: -20%;
+    background: #ff6f61;
+    animation-duration: 8s;
+}
+
+.balloon:nth-child(2) {
+    left: 30%;
+    top: -15%;
+    background: #6b5b95;
+    animation-duration: 10s;
+}
+
+.balloon:nth-child(3) {
+    left: 50%;
+    top: -25%;
+    background: #88b04b;
+    animation-duration: 7s;
+}
+
+.balloon:nth-child(4) {
+    left: 70%;
+    top: -20%;
+    background: #f7cac9;
+    animation-duration: 9s;
+}
+
+.balloon:nth-child(5) {
+    left: 90%;
+    top: -15%;
+    background: #92a8d1;
+    animation-duration: 6s;
+}
+
+@keyframes floatBalloon {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
